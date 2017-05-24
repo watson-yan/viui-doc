@@ -29,6 +29,7 @@ module.exports = {
           "never"
     ],
     "comma-dangle": ["error", "never"],
+    "no-plusplus": "off",
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       'js': 'never',

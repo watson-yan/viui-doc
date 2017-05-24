@@ -12,3 +12,81 @@ html, body, #app {
   height: 100%;
   width: 100%;
 }
+
+#app {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  header {
+    flex-grow: 0;
+    height: 60px;
+    padding: 0 60px;
+    .logo {
+      line-height: 60px;
+      font-size: 2rem;
+    }
+  }
+  article {
+    flex-grow: 1;
+    display: flex;
+    display: -webkit-flex;
+    .nav-menu {
+      flex-grow: 0;
+      .lv1-menu {
+        height: 100%;
+        width: 50px;
+        float: left;
+        li {
+          color: #fff;
+          line-height: 3rem;
+          cursor: pointer;
+          text-align: center;
+          &.active{
+            background: rgb(237, 239, 240);
+            color:#16499a;
+            cursor: pointer;
+          }
+        }
+      }
+      .assistant {
+        width: 160px;
+        float: left;
+        height: 100%;
+        background: rgb(237, 239, 240);
+        h3 {
+          font-weight: 400;
+          line-height: 50px;
+        }
+        .lv2-menu {
+          li {
+            padding: 0px 10px;
+            font-size: 0.875rem;
+            line-height: 40px;
+            cursor: pointer;
+            a {
+              display: block;
+              color: #333;
+              border-bottom: 1px solid #e5e5e5;
+              text-decoration: none;
+            }
+            &.active {
+              background: #fff;
+              color: #16499a;
+              border-bottom: 1px solid #888;
+              a {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .router-content {
+      flex-grow: 1;
+      &>.content {
+        padding: 15px;
+      }
+    }
+  }
+}

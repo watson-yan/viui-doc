@@ -12,9 +12,9 @@
                 <i :class="m.icon"></i>
               </li>
           </ul>
-          <div v-if="activeNode" class="assistant">
+          <div class="assistant">
             <h3 class="no-margin align-center">{{active.title}}</h3>
-            <ul class="unstyled-list no-margin lv2-menu">
+            <ul v-if="activeNode" class="unstyled-list no-margin lv2-menu">
               <li v-for="item of active.nodes"
                 @click="activeNode = item"
                 :class="{'active': activeNode.name == item.name}">
@@ -75,12 +75,20 @@ export default {
     active() {
       if (this.active.nodes.length > 0) {
         this.activeNode = this.active.nodes[0]
+      } else {
+        this.activeNode = null
       }
     },
     activeNode() {
-      this.$router.push({
-        path: this.activeNode.link
-      })
+      if (!this.activeNode) {
+        this.$router.push({
+          path: '/'
+        })
+      } else {
+        this.$router.push({
+          path: this.activeNode.link
+        })
+      }
     }
   },
   methods: {

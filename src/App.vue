@@ -62,7 +62,23 @@ export default {
         {
           title: 'Color',
           icon: 'fa fa-paint-brush',
-          nodes: []
+          nodes: [
+            { name: 'Background', icon: 'fa fa-sticky-note-o', link: '/background' }
+          ]
+        },
+        {
+          title: 'Table',
+          icon: 'fa fa-table',
+          nodes: [
+            { name: 'Table', icon: 'fa fa-table', link: '/table' }
+          ]
+        },
+        {
+          title: 'Form',
+          icon: 'fa fa-wpforms',
+          nodes: [
+            { name: 'Input', icon: 'fa fa-italic', link: '/input' }
+          ]
         }
       ]
     }

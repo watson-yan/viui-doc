@@ -19,7 +19,7 @@ html, body, #app {
   display: -webkit-flex;
   flex-direction: column;
   header {
-    flex-grow: 0;
+    flex: 0 0 auto;
     height: 60px;
     padding: 0 60px;
     .logo {
@@ -28,11 +28,11 @@ html, body, #app {
     }
   }
   article {
-    flex-grow: 1;
+    flex: 1 0 auto;
     display: flex;
     display: -webkit-flex;
     .nav-menu {
-      flex-grow: 0;
+      flex: 0 0 auto;
       .lv1-menu {
         height: 100%;
         width: 50px;

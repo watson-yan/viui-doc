@@ -63,7 +63,7 @@ export default {
           title: '颜色',
           icon: 'fa fa-paint-brush',
           nodes: [
-            { name: 'Background 背景色', icon: 'fa fa-sticky-note-o', link: '/background' }
+            { name: 'Colors Metro色系', icon: 'fa fa-sticky-note-o', link: '/color' }
           ]
         },
         {
@@ -74,11 +74,11 @@ export default {
           ]
         },
         {
-          title: 'Form',
+          title: '表单元素',
           icon: 'fa fa-wpforms',
           nodes: [
             { name: 'Input 输入框', icon: 'fa fa-italic', link: '/input' },
-            { name: 'RadioBox 单选框', icon: 'fa fa-circle-o', link: '/radio' },
+            { name: 'Radio 单选按钮', icon: 'fa fa-circle-o', link: '/radio' },
             { name: 'CheckBox 复选框', icon: 'fa fa-check-square-o', link: '/checkbox' },
             { name: 'Switch 开关', icon: 'fa fa-toggle-off', link: '/switch' }
           ]
@@ -99,15 +99,8 @@ export default {
       }
     },
     activeNode() {
-      if (!this.activeNode) {
-        this.$router.push({
-          path: '/'
-        })
-      } else {
-        this.$router.push({
-          path: this.activeNode.link
-        })
-      }
+      const link = this.activeNode ? this.activeNode.link : '/'
+      this.$router.push({ path: link })
     }
   },
   methods: {

@@ -13,3 +13,12 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+/* 调用 Google code prettify*/
+Vue.directive('prettify', {
+  inserted() {
+    // const c = el.querySelector('code')
+    // c.innerHTML = c.innerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    window.prettyPrint()
+  }
+})

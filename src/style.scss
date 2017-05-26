@@ -100,3 +100,31 @@ html, body, #app {
     }
   }
 }
+
+.prettyprint {
+  background-color: #eeeeee;
+  border-width: 1px !important;
+  border-color: #eeeeee !important;
+  border-left: 8px #555555 solid !important;
+  overflow: hidden;
+  overflow-x: auto;
+  ol {
+    background-color: transparent !important;
+    li {
+      background-color: white !important; 
+      list-style-type: decimal !important; 
+      padding-left: 1em; 
+      border-bottom: 1px #eee solid;
+      line-height: 1.25rem;
+      &:last-child{
+        border-bottom: 0;
+        }
+    }
+  }
+  code {
+    .tag {
+      font-size: 1rem;
+      color: #008;
+    }
+  }
+}

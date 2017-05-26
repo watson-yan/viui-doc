@@ -11,7 +11,7 @@ import Radio from '@/components/form/radio'
 import Checkbox from '@/components/form/checkbox'
 import Switch from '@/components/form/switch'
 // Color
-import Background from '@/components/color/background'
+import Color from '@/components/color/color'
 
 Vue.use(Router)
 
@@ -41,7 +41,7 @@ export default new Router({
     /*
     * Color
     */
-    { path: '/background', name: 'Background Color', component: Background }
+    { path: '/color', name: 'Color', component: Color }
   ]
   // mode: 'history'
 })

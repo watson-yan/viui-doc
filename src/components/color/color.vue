@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <section class="box flex-grid">
-      <h3 class="title fg-darkCyan">Background 背景色</h3>
+      <h3 class="title fg-darkCyan">Metro colors 主色系</h3>
       <ul class="row unstyled-list">
         <li class="padding10 cell colspan2 align-center text-shadow fg-white bg-black">black</li>
         <li class="padding10 cell colspan2 align-center text-shadow fg-white bg-white">white</li>

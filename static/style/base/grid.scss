@@ -12,9 +12,8 @@
     display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
-    
     .cell {
-      -webkit-flex: 0 0 50%;
+      -webkit-flex: 0 0 8.33333333%;
       flex: 0 0 8.33333333%;
     }
     &.flex-just-center {

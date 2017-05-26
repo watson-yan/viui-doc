@@ -5,7 +5,12 @@ import Button from '@/components/element/button'
 import Tag from '@/components/element/tag'
 
 import Table from '@/components/table/table'
+// Form
 import Input from '@/components/form/input'
+import Radio from '@/components/form/radio'
+import Checkbox from '@/components/form/checkbox'
+import Switch from '@/components/form/switch'
+// Color
 import Background from '@/components/color/background'
 
 Vue.use(Router)
@@ -26,6 +31,9 @@ export default new Router({
     * Form
     */
     { path: '/input', name: 'Input', component: Input },
+    { path: '/radio', name: 'Radio', component: Radio },
+    { path: '/checkbox', name: 'Checkbox', component: Checkbox },
+    { path: '/switch', name: 'Switch', component: Switch },
     /*
     * Table
     */

@@ -18,7 +18,7 @@
               <li v-for="item of active.nodes"
                 @click="activeNode = item"
                 :class="{'active': activeNode.name == item.name}">
-                <a><i :class="item.icon"></i> {{item.name}}</a>
+                <a class="text-ellipsis"><i :class="item.icon"></i> {{item.name}}</a>
               </li>
             </ul>
           </div>
@@ -52,32 +52,35 @@ export default {
           ]
         },
         {
-          title: 'Element',
+          title: '元素',
           icon: 'fa fa-list-ul',
           nodes: [
-            { name: 'Button', icon: 'fa fa-hand-pointer-o', link: '/button' },
-            { name: 'Tag', icon: 'fa fa-tag', link: '/tag' }
+            { name: 'Button 按钮', icon: 'fa fa-hand-pointer-o', link: '/button' },
+            { name: 'Tag 标签', icon: 'fa fa-tag', link: '/tag' }
           ]
         },
         {
-          title: 'Color',
+          title: '颜色',
           icon: 'fa fa-paint-brush',
           nodes: [
-            { name: 'Background', icon: 'fa fa-sticky-note-o', link: '/background' }
+            { name: 'Background 背景色', icon: 'fa fa-sticky-note-o', link: '/background' }
           ]
         },
         {
-          title: 'Table',
+          title: '表格',
           icon: 'fa fa-table',
           nodes: [
-            { name: 'Table', icon: 'fa fa-table', link: '/table' }
+            { name: 'Table 表格', icon: 'fa fa-table', link: '/table' }
           ]
         },
         {
           title: 'Form',
           icon: 'fa fa-wpforms',
           nodes: [
-            { name: 'Input', icon: 'fa fa-italic', link: '/input' }
+            { name: 'Input 输入框', icon: 'fa fa-italic', link: '/input' },
+            { name: 'RadioBox 单选框', icon: 'fa fa-circle-o', link: '/radio' },
+            { name: 'CheckBox 复选框', icon: 'fa fa-check-square-o', link: '/checkbox' },
+            { name: 'Switch 开关', icon: 'fa fa-toggle-off', link: '/switch' }
           ]
         }
       ]

@@ -1,39 +1,60 @@
 <template>
   <div class="content">
-    <h3 class="no-margin fg-darkCyan">Input</h3>
+    <h3 class="title fg-darkCyan">文本框</h3>
     <div class="box">
-              <form>
-          <section class="form-group">
-            <label>Text</label>
-            <div class="input-control text">
-                <input type="text">
+        <form class="flex-grid">
+          <div class="row form-group">
+            <label class="label align-right cell colspan2">文本框</label>
+            <div class="input-control cell colspan4">
+              <input type="text">
             </div>
-          </section>
-          <section class="form-group">
-            <label>Password</label>
-            <div class="input-control text">
-                <input type="password">
+          </div>
+          <div class="row form-group">
+            <label class="label align-right cell colspan2">密码</label>
+            <div class="input-control cell colspan4">
+              <input type="password">
             </div>
-          </section>
-          <section class="form-group">
-            <label>Placeholder</label>
-            <div class="input-control text">
-                <input type="text" placeholder="Input your text here...">
+          </div>            
+          <div class="row form-group">
+            <label class="label align-right cell colspan2">手机</label>
+            <div class="input-control cell colspan4">
+              <input type="text" placeholder="请输入手机号码">
             </div>
-          </section>
-          <section class="form-group">
-            <label>Readonly Input</label>
-            <div class="input-control text">
-                <input type="text" value="Metro UI" readonly>
+          </div>
+          <div class="row form-group">
+            <label class="label align-right cell colspan2">Readonly</label>
+            <div class="input-control cell colspan4">
+              <input type="text" value="Readonly" readonly>
             </div>
-          </section>
-          <section class="form-group">
-            <label>Disabled Input</label>
-            <div class="input-control text">
-                <input type="text" value="Metro UI" disabled>
+          </div>
+
+          <div class="row form-group">
+            <label class="label align-right cell colspan2">Disabled</label>
+            <div class="input-control cell colspan4">
+              <input type="text" disabled>
             </div>
-          </section>
+          </div>
         </form>
+    </div>
+
+    <h3 class="title fg-darkCyan">文本框状态</h3>
+    <div class="box">
+        <h5 class="no-margin">1. error</h5>
+        <div class="input-control error">
+            <input type="text">
+        </div>
+        <h5 class="no-margin">2. warning</h5>
+        <div class="input-control warning">
+            <input type="text">
+        </div>
+        <h5 class="no-margin">3. success</h5>
+        <div class="input-control success">
+            <input type="text">
+        </div>
+        <h5 class="no-margin">4. required</h5>
+        <div class="input-control required">
+          <input type="text">
+        </div>
     </div>
   </div>
 </template>

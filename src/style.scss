@@ -11,6 +11,8 @@ html, body, #app {
   margin: 0;
   height: 100%;
   width: 100%;
+  min-width: 980px;
+  overflow: hidden;
 }
 
 #app {
@@ -18,7 +20,7 @@ html, body, #app {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
-  header {
+  &>header {
     flex: 0 0 auto;
     height: 60px;
     padding: 0 60px;
@@ -27,10 +29,12 @@ html, body, #app {
       font-size: 2rem;
     }
   }
-  article {
-    flex: 1 0 auto;
+  &>article {
+    flex: 1 1 auto;
+    flex-direction: row;
     display: flex;
     display: -webkit-flex;
+    overflow: hidden;
     .nav-menu {
       flex: 0 0 auto;
       .lv1-menu {
@@ -84,8 +88,14 @@ html, body, #app {
     }
     .router-content {
       flex-grow: 1;
+      overflow-y: auto;
       &>.content {
         padding: 15px;
+        .title {
+          margin: 15px 0px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #ececec;
+        }
       }
     }
   }

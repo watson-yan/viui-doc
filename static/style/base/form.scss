@@ -9,6 +9,7 @@ button, input, select, textarea {
 label {
   cursor: pointer;
 }
+
 .input-control {
   display: inline-block;
   min-height: 2.125rem;
@@ -291,5 +292,8 @@ label {
     margin-top: 12px;
     padding: 0px 15px;
     font-size: 0.875rem;
+  }
+  label.input-control {
+    line-height: 2.125rem;
   }
 }

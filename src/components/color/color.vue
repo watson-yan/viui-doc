@@ -2,6 +2,11 @@
   <div class="content">
     <section class="box flex-grid">
       <h3 class="title fg-darkCyan">Metro colors 主色系</h3>
+      <p class="fg-gray">
+        下面列出来的颜色可以用来充当背景色或文字颜色:
+      </p>
+      <p class="fg-gray">背景颜色: <span class="tag info">bg-*</span></p>
+      <p class="fg-gray">字体颜色: <span class="tag info">fg-*</span></p>
       <ul class="row unstyled-list">
         <li class="padding10 cell colspan2 align-center text-shadow fg-white bg-black">black</li>
         <li class="padding10 cell colspan2 align-center text-shadow fg-white bg-white">white</li>
@@ -58,6 +63,38 @@
         <li class="padding10 cell colspan2 align-center text-shadow fg-white bg-grayLighter">grayLighter</li>
       </ul>
     </section>
+    <br>
+    <h5>背景色用法:</h5>
+    <div class="flex-grid">
+      <div class="row">
+        <div class="cell colspan3 padding30 bg-blue align-center fg-white">
+            background: blue
+        </div>
+        <div class="cell colspan9" style="padding-left: 40px;">
+<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;div class="bg-blue"&gt;
+   background: blue
+&lt;/div&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h5 class="no-margin">字体颜色:</h5>
+    <div class="flex-grid">
+      <div class="row">
+        <div class="cell colspan3" style="padding: 30px 0;">
+          <span class="fg-blue">blue</span>
+          <span class="fg-indigo">indigo</span>
+          <span class="fg-darkPink">darkPink</span>
+        </div>
+        <div class="cell colspan9" style="padding-left: 40px;">
+<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;span class="fg-blue"&gt;blue&lt;/span&gt;
+&lt;span class="fg-indigo"&gt;indigo&lt;/span&gt;
+&lt;span class="fg-darkPink"&gt;darkPink&lt;/span&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>

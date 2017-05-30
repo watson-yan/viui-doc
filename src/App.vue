@@ -2,6 +2,9 @@
   <div id="app">
     <header class="bg-dark">
       <div class="logo fg-white">
+        <img src="../static/logo.png" alt="VIUI" width="60" height="60">
+      </div>
+      <div class="intro">
         VIUI
       </div>
     </header>

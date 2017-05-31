@@ -19,6 +19,7 @@ export default (option) => {
     messageComponent.queue.push({
       caption: option.caption || '',
       content: option.content || '',
+      type: option.type || '',
       stamp: temp
     })
   }

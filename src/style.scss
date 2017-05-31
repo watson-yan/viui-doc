@@ -23,11 +23,27 @@ html, body, #app {
   &>header {
     flex: 0 0 auto;
     height: 60px;
-    .logo, .intro {
-      display: inline-block;
-      height: 60px;
-      line-height: 60px;
-      font-size: 2rem;
+    .row {
+      &>div {
+        display: inline-block;
+        padding: 0px 15px;
+        height: 60px;
+        line-height: 60px;
+      }
+      .logo, .intro {
+        font-size: 2rem;
+      }
+      .app-menu {
+        margin: 0;
+        li {
+          padding: 0 10px;
+          float: left;
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
   &>article {

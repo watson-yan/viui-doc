@@ -1,11 +1,23 @@
 <template>
   <div id="app">
-    <header class="bg-dark">
-      <div class="logo fg-white">
-        <img src="../static/logo.png" alt="VIUI" width="60" height="60">
-      </div>
-      <div class="intro">
-        VIUI
+    <header class="flex-grid bg-dark">
+      <div class="row flex-just-sb">
+        <div class="intro fg-white">
+          VIUI<small style="font-size:14px; font-style: italic;">Metro UI组件库 - Vue(2.x)</small>
+        </div>
+        <div>
+          <div class="input-control text" style="width: 300px;">
+            <input type="text" placeholder="Search ..." style="padding-right: 58px;">
+            <button class="button">
+              <i class="fa fa-search"></i></button>
+          </div>
+        </div>
+        <div>
+          <ul class="app-menu unstyled-list clearfix">
+            <li class="fg-white"><a href="https://github.com/watson-yan/ViUI" target="_blank">Github</a></li>
+            <li class="fg-white">About</li>
+          </ul>
+        </div>
       </div>
     </header>
         <article>
@@ -47,11 +59,28 @@ export default {
       activeNode: null,
       menu: [
         {
-          title: 'Home',
+          title: 'Demo',
           icon: 'fa fa-home',
           nodes: [
-            { name: 'Page1', icon: 'fa fa-laptop', link: '/demo' },
-            { name: 'Page2', icon: 'fa fa-laptop', link: '/demo1' }
+            { name: 'Demo1', icon: 'fa fa-laptop', link: '/demo1' },
+            { name: 'Demo2', icon: 'fa fa-laptop', link: '/demo2' }
+          ]
+        },
+        {
+          title: '组件',
+          icon: 'fa fa-paper-plane',
+          nodes: [
+            { name: 'Pagination 分页器', icon: 'fa fa-ellipsis-h', link: '/pagination-demo' },
+            { name: 'Tab 选项卡', icon: 'fa fa-clone', link: '/tabs-demo' },
+            { name: 'Upload 上传组件', icon: 'fa fa-upload', link: '/demo2' },
+            { name: 'Slide 幻灯片', icon: 'fa fa-image', link: '/demo2' }
+          ]
+        },
+        {
+          title: '插件',
+          icon: 'fa fa-arrows-alt',
+          nodes: [
+            { name: 'Message 消息', icon: 'fa fa-image', link: '/message' }
           ]
         },
         {
@@ -73,7 +102,7 @@ export default {
         },
         {
           title: '元素',
-          icon: 'fa fa-list-ul',
+          icon: 'fa fa-cubes',
           nodes: [
             { name: 'Button 按钮', icon: 'fa fa-hand-pointer-o', link: '/button' },
             { name: 'Tag 标签', icon: 'fa fa-tag', link: '/tag' }
@@ -91,6 +120,16 @@ export default {
           icon: 'fa fa-table',
           nodes: [
             { name: 'Table 表格', icon: 'fa fa-table', link: '/table' }
+          ]
+        },
+        {
+          title: '帮助类',
+          icon: 'fa fa-question-circle-o',
+          nodes: [
+            { name: 'Margin', icon: 'fa fa-gear', link: '/table' },
+            { name: 'Padding', icon: 'fa fa-gear', link: '/table' },
+            { name: 'List', icon: 'fa fa-gear', link: '/table' },
+            { name: 'Float', icon: 'fa fa-gear', link: '/table' }
           ]
         }
       ]

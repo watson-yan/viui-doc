@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h3 class="title fg-darkCyan">文本框</h3>
+    <h3 class="title fg-darkCyan">Text 文本框</h3>
     <div class="box">
         <form class="flex-grid">
           <div class="row form-group">
@@ -52,7 +52,7 @@
         </form>
     </div>
     <br>
-    <h3 class="title fg-darkCyan">文本框状态</h3>
+    <h3 class="title fg-darkCyan">Text field states 文本框状态</h3>
     <div class="box">
         <h5 class="no-margin">1. error</h5>
         <div class="input-control error">
@@ -84,7 +84,21 @@
   &lt;input type="text"&gt;
 &lt;/div&gt;
 </code></pre>
+      </div>
+
+    <br>
+    <h3 class="title fg-darkCyan">Input with buttons 带按钮的输入框</h3>
+    <div class="input-control text" style="width: 300px;">
+      <input type="text" placeholder="Search ..." style="padding-right: 58px;">
+      <button class="button">
+        <i class="fa fa-search"></i></button>
     </div>
+<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;div class="input-control text" style="width: 300px;"&gt;
+  &lt;input type="text" placeholder="Search ..." style="padding-right: 58px;"&gt;
+  &lt;button class="button"&gt;
+    &lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div>
+</code></pre>
     </div>
   </div>
 </template>

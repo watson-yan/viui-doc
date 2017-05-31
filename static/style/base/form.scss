@@ -46,17 +46,17 @@ label {
       border:  1px solid #ce352c;
     }
   }
-   &.warning {
+  &.warning {
     input, select, textarea {
       border:  1px solid #e3c800;
     }
   }
-   &.success {
+  &.success {
     input, select, textarea {
       border:  1px solid #60a917;
     }
   }
-   &.required {
+  &.required {
     input, select, textarea {
       border:  1px solid #1ba1e2;
     }
@@ -167,6 +167,17 @@ label {
         transform: rotate(0deg);
         border-radius: 50%;
       }
+    }
+  }
+
+  &.text {
+    .button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      margin: 0;
+      height: 100%;
     }
   }
 }

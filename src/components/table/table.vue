@@ -72,7 +72,7 @@
           </tr>
         </tbody>
       </table>
-
+<br>
 <pre v-prettify class="prettyprint linenums"><code v-pre>&lt;!--默认--&gt;
 &lt;table class="table"&gt;...&lt;/table&gt;
 &lt;!--striped(条纹、斑马效果)--&gt;

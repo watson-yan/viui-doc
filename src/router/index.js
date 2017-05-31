@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
+// Components
+import Pagination from '@/components/components/pagination-demo'
+import Tabs from '@/components/components/tabs-demo'
+// Plugins
+import Message from '@/components/pluginsDemo/message'
 // Element
 import Button from '@/components/element/button'
 import Tag from '@/components/element/tag'
@@ -25,6 +30,15 @@ export default new Router({
       name: 'Home',
       component: Home
     },
+    /*
+    * Components
+    */
+    { path: '/pagination-demo', name: 'Pagination', component: Pagination },
+    { path: '/tabs-demo', name: 'Tabs', component: Tabs },
+    /*
+    * Plugins
+    */
+    { path: '/message', name: 'Message', component: Message },
     /*
     * Element
     */

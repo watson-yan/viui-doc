@@ -11,13 +11,14 @@ export default (option) => {
   const temp = counter
   if (typeof option === 'string') {
     messageComponent.queue.push({
-      text: option,
+      content: option,
       stamp: temp
     })
   }
   if (typeof option === 'object') {
     messageComponent.queue.push({
-      text: option.text,
+      caption: option.caption || '',
+      content: option.content || '',
       stamp: temp
     })
   }

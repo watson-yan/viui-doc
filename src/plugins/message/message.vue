@@ -3,7 +3,7 @@
         <template v-for="(item, index) of queue">
             <transition name="slide-fade">
                 <section class="message-item">
-                    {{item.text}}<span class="close" @click="remove(index)">+</span>      
+                    {{item.content}}<span class="close" @click="remove(index)">+</span>      
                 </section>
             </transition>        
         </template>

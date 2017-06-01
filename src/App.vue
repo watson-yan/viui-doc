@@ -80,7 +80,8 @@ export default {
           title: '插件',
           icon: 'fa fa-arrows-alt',
           nodes: [
-            { name: 'Message 消息', icon: '', link: '/message' }
+            { name: 'Message 消息', icon: '', link: '/message' },
+            { name: 'Alert 弹窗提醒', icon: '', link: '/alert' }
           ]
         },
         {

@@ -6,6 +6,7 @@ import Pagination from '@/components/components/pagination-demo'
 import Tabs from '@/components/components/tabs-demo'
 // Plugins
 import Message from '@/components/pluginsDemo/message'
+import Alert from '@/components/pluginsDemo/alert'
 // Element
 import Button from '@/components/element/button'
 import Tag from '@/components/element/tag'
@@ -39,6 +40,7 @@ export default new Router({
     * Plugins
     */
     { path: '/message', name: 'Message', component: Message },
+    { path: '/alert', name: 'Alert', component: Alert },
     /*
     * Element
     */

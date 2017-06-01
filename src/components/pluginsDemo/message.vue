@@ -13,6 +13,8 @@
         content: 'Message Content',       // 消息主题
         type: 'Message Type',      // 消息类型：default(不赋值)，info, success, alert, warning
         duration: 5000      // 持续时间（默认5s关闭）
+    }).then(() => {    // 使用了Promise语法糖, 消息框消失后可以触发回调
+      // 回调
     })</code></pre>
   </div>
 </template>
@@ -28,6 +30,13 @@
           content: '这里是展示Message的地方',
           type: msgType,
           duration: 8000
+        }).then(() => {
+          this.$message({
+            caption: 'Message Title',
+            content: '这里是展示Message的地方',
+            type: 'warning',
+            duration: 8000
+          })
         })
       }
     }

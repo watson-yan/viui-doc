@@ -14,7 +14,10 @@
         </div>
         <div>
           <ul class="app-menu unstyled-list clearfix">
-            <li class="fg-white"><a href="https://github.com/watson-yan/ViUI" target="_blank">Github</a></li>
+            <li class="fg-white">
+                <a href="https://github.com/watson-yan/ViUI" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i> Github</a>
+            </li>
             <li class="fg-white">About</li>
           </ul>
         </div>
@@ -81,7 +84,8 @@ export default {
           icon: 'fa fa-arrows-alt',
           nodes: [
             { name: 'Message 消息', icon: '', link: '/message' },
-            { name: 'Alert 弹窗提醒', icon: '', link: '/alert' }
+            { name: 'Alert 弹窗提醒', icon: '', link: '/alert' },
+            { name: 'Confirm 确认框', icon: '', link: '/confirm' }
           ]
         },
         {

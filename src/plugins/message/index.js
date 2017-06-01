@@ -7,7 +7,10 @@ document.body.appendChild(messageBox)
 
 const messageComponent = new Vue(Message).$mount(messageBox)
 let counter = 1
-export default (option) => {
+export default option => new Promise((resolve, reject) => {
+  if (!option) {
+    reject()
+  }
   const temp = counter
   if (typeof option === 'string') {
     messageComponent.queue.push({
@@ -30,5 +33,6 @@ export default (option) => {
         messageComponent.queue.splice(index, 1)
       }
     })
+    resolve()
   }, option.duration || 5000)
-}
+})

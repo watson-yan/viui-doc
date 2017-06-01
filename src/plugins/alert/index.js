@@ -6,10 +6,11 @@ document.body.appendChild(alertBox)
 
 const alertComponent = new Vue(Alert).$mount(alertBox)
 
-export default (option) => {
+export default option => new Promise((resolve) => {
   if (typeof option === 'string') {
     alertComponent.queue.push({
-      content: option
+      content: option,
+      callback: resolve
     })
   }
   if (typeof option === 'object') {
@@ -17,8 +18,8 @@ export default (option) => {
       caption: option.caption,
       content: option.content,
       type: option.type,
-      cb: option.cb
+      callback: resolve
     })
   }
-}
+})
 

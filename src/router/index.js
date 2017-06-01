@@ -7,6 +7,7 @@ import Tabs from '@/components/components/tabs-demo'
 // Plugins
 import Message from '@/components/pluginsDemo/message'
 import Alert from '@/components/pluginsDemo/alert'
+import Confirm from '@/components/pluginsDemo/confirm'
 // Element
 import Button from '@/components/element/button'
 import Tag from '@/components/element/tag'
@@ -41,6 +42,7 @@ export default new Router({
     */
     { path: '/message', name: 'Message', component: Message },
     { path: '/alert', name: 'Alert', component: Alert },
+    { path: '/confirm', name: 'Confirm', component: Confirm },
     /*
     * Element
     */

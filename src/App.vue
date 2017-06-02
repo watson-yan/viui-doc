@@ -73,10 +73,12 @@ export default {
           title: '组件',
           icon: 'fa fa-paper-plane',
           nodes: [
+            { name: 'Dropdown 下拉按钮', icon: 'fa fa-caret-down', link: '/dropdown-demo' },
             { name: 'Pagination 分页器', icon: 'fa fa-ellipsis-h', link: '/pagination-demo' },
             { name: 'Tab 选项卡', icon: 'fa fa-clone', link: '/tabs-demo' },
             { name: 'Upload 上传组件', icon: 'fa fa-upload', link: '/demo2' },
-            { name: 'Slide 幻灯片', icon: 'fa fa-image', link: '/demo2' }
+            { name: 'Slide 幻灯片', icon: 'fa fa-image', link: '/demo2' },
+            { name: 'Datepicker 日期选择器', icon: 'fa fa-calendar', link: '/datepicker-demo' }
           ]
         },
         {
@@ -85,7 +87,8 @@ export default {
           nodes: [
             { name: 'Message 消息', icon: '', link: '/message' },
             { name: 'Alert 弹窗提醒', icon: '', link: '/alert' },
-            { name: 'Confirm 确认框', icon: '', link: '/confirm' }
+            { name: 'Confirm 确认框', icon: '', link: '/confirm' },
+            { name: 'Loading 加载动画', icon: '', link: '/loading' }
           ]
         },
         {

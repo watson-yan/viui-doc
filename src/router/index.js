@@ -4,10 +4,13 @@ import Home from '@/components/Home'
 // Components
 import Pagination from '@/components/components/pagination-demo'
 import Tabs from '@/components/components/tabs-demo'
+import Dropdown from '@/components/components/dropdown-demo'
+import Datepicker from '@/components/components/datepicker-demo'
 // Plugins
 import Message from '@/components/pluginsDemo/message'
 import Alert from '@/components/pluginsDemo/alert'
 import Confirm from '@/components/pluginsDemo/confirm'
+import Loading from '@/components/pluginsDemo/loading'
 // Element
 import Button from '@/components/element/button'
 import Tag from '@/components/element/tag'
@@ -37,12 +40,15 @@ export default new Router({
     */
     { path: '/pagination-demo', name: 'Pagination', component: Pagination },
     { path: '/tabs-demo', name: 'Tabs', component: Tabs },
+    { path: '/dropdown-demo', name: 'Dropdown', component: Dropdown },
+    { path: '/datepicker-demo', name: 'Datepicker', component: Datepicker },
     /*
     * Plugins
     */
     { path: '/message', name: 'Message', component: Message },
     { path: '/alert', name: 'Alert', component: Alert },
     { path: '/confirm', name: 'Confirm', component: Confirm },
+    { path: '/loading', name: 'Loading', component: Loading },
     /*
     * Element
     */

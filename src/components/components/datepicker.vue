@@ -49,7 +49,7 @@
         </div>
     </div>
 </template>
-<style lang="sass">
+<style lang="scss">
 .vue-datepicker {
   &>input {
     padding: 5px 10px;
@@ -234,9 +234,9 @@
         if (!val) {
           return ''
         }
-        return `${val.year}-${val.month}-${val.date}`.replace(/\d+/g, (a) => {
-          return (a.length === 4) ? a : ((a.length === 2) ? a : ('0' + a))
-        })
+        return val
+        // return `${val.year}-${val.month}-${ val.date }`.replace(/\d+/g,
+        //   a => a.length === 4 ? a : ((a.length === 2) ? a : (`0${a}`)))
       }
     },
     methods: {

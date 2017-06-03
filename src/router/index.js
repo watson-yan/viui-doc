@@ -25,6 +25,8 @@ import Table from '@/components/table/table'
 import Color from '@/components/color/color'
 // Grid
 import Grid from '@/components/grid/grid'
+// Helper
+import Helper from '@/components/helper/helper'
 
 Vue.use(Router)
 
@@ -70,9 +72,13 @@ export default new Router({
     */
     { path: '/color', name: 'Color', component: Color },
     /*
-    * Color
+    * Flex grid
     */
-    { path: '/grid', name: 'Grid', component: Grid }
+    { path: '/grid', name: 'Grid', component: Grid },
+    /*
+    * Helper
+    */
+    { path: '/helper', name: 'Helper', component: Helper }
   ]
   // mode: 'history'
 })

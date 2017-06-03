@@ -134,10 +134,7 @@ export default {
           title: '帮助类',
           icon: 'fa fa-question-circle-o',
           nodes: [
-            { name: 'Margin', icon: 'fa fa-gear', link: '/table' },
-            { name: 'Padding', icon: 'fa fa-gear', link: '/table' },
-            { name: 'List', icon: 'fa fa-gear', link: '/table' },
-            { name: 'Float', icon: 'fa fa-gear', link: '/table' }
+            { name: 'Helper', icon: 'fa fa-gear', link: '/helper' }
           ]
         }
       ]

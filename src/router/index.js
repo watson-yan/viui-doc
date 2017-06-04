@@ -27,6 +27,7 @@ import Color from '@/components/color/color'
 import Grid from '@/components/grid/grid'
 // Helper
 import Helper from '@/components/helper/helper'
+import Text from '@/components/helper/text'
 
 Vue.use(Router)
 
@@ -78,7 +79,8 @@ export default new Router({
     /*
     * Helper
     */
-    { path: '/helper', name: 'Helper', component: Helper }
+    { path: '/helper', name: 'Helper', component: Helper },
+    { path: '/text', name: 'Text', component: Text }
   ]
   // mode: 'history'
 })

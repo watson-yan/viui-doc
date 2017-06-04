@@ -2,7 +2,6 @@
   <div class="content">
     <h3 class="title fg-darkCyan">Pagination 分页器</h3>
     <pagination :total="120" :cb="go"></pagination>
-    <p class="fg-pink align-center" style="height: 23px;">{{text}}</p>
     
     <p class="fg-gray">Props 列表</p>
     <table class="table striped hovered bordered border">
@@ -62,7 +61,7 @@
     },
     methods: {
       go(n) {
-        this.text = `你选择了第${n}页`
+        this.$message(`你选择了第${n}页`)
       }
     }
   }

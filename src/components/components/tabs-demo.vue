@@ -22,7 +22,7 @@
             <td>Array</td>
             <td>True</td>
             <td></td>
-            <td>选项卡的Title列表</td>
+            <td>选项卡的name列表</td>
           </tr>
           <tr>
             <td>value</td>
@@ -37,7 +37,7 @@
       <p class="fg-gray">HTML代码</p>
 <pre v-prettify class="prettyprint linenums"><code v-pre>&lt;!--:value.sync 为必填(以配合双向绑定)--&gt;
 &lt;tabs :list="list" :value.sync="value"&gt;
-  &lt;!--slot的值为该容器所对应的Title--&gt;
+  &lt;!--slot的值为该容器所对应的name--&gt;
   &lt;div slot="div1" class="padding15 bg-grayLighter"&gt;我是div1&lt;/div&gt;
   &lt;div slot="div2" class="padding15 bg-grayLighter"&gt;我是div2&lt;/div&gt;
 &lt;/tabs&gt;
@@ -51,7 +51,7 @@
         { name: 'div1' },
         { name: 'div2' }
       ],
-      value: 'div1'
+      value: 'div1' // 需要激活的容器name
     }
   }
 }

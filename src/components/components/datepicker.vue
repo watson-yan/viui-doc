@@ -1,6 +1,13 @@
 <template>
     <div class="vue-datepicker">
-        <input @click.stop="show=!show" :value="current | dateFormat" type="text" readonly>
+        <div class="vue-datepicker-input">
+            <input @click.stop="show=!show" :value="current | dateFormat" type="text" readonly>
+            <svg t="1496587732950" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3301"
+             xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20">
+                <path d="M864 192H704v-64h-64v64H384v-64h-64v64H160c-17.6 0-32 14.4-32 32v640c0 17.6 14.4 32 32 32h704c17.6 0 32-14.4 32-32V224c0-17.6-14.4-32-32-32z m-32 640H192V384h640v448zM384 512H256v-64h128v64z m192 0H448v-64h128v64z m192 0H640v-64h128v64zM384 640H256v-64h128v64z m192 0H448v-64h128v64z m192 0H640v-64h128v64zM384 768H256v-64h128v64z m192 0H448v-64h128v64z" p-id="3302" fill="#8a8a8a">
+                </path>
+            </svg>
+        </div>
         <div v-if="show" class="vue-datepicker-wrap">
             <div class="vue-datepicker-header" @click.stop="">
                 <span @click.stop="switchMonth(-1)" class="vue-datepicker-header-btn vue-datepicker-header-btn-pre">&lt;</span>
@@ -34,9 +41,12 @@
                     </tbody>
                 </table>
                 <div v-if="selectYear" class="vue-date-picker-year-panel">
-                    <ul ref="year">
-                        <li v-for="y of years" @click.stop="pickYear(y)" :class="{'active': y == select.year}">{{y}}</li>
-                    </ul>
+                  <div>
+                      <ul ref="year">
+                          <li v-for="y of years" @click.stop="pickYear(y)" :class="{'active': y == select.year}">{{y}}</li>
+                      </ul>
+                  </div>
+                  <div>
                     <ul ref="month">
                         <li v-for="(m, $index) of months" 
                             @click.stop="pickMonth($index + 1)" 
@@ -44,116 +54,12 @@
                             {{m}}
                         </li>
                     </ul>
+                  </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<style lang="scss">
-.vue-datepicker {
-  &>input {
-    padding: 5px 10px;
-    width: 200px;
-    line-height: 24px;
-    border: 1px solid #BFCBD7;
-    border-radius: 3px;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
-    &:focus {
-        border: 1px solid #20a0ff;
-    }
-  }
-  .vue-datepicker-wrap {
-    width: 240px;
-    box-shadow: 2px 2px 8px #bdb8b8;
-    z-index: 999;
-    .vue-datepicker-header {
-      padding: 0px 15px;
-      font-size: 14px;
-      text-align: center;
-      line-height: 36px;
-      border-bottom: 1px solid #ccc;
-
-      .vue-datepicker-header-btn {
-        cursor: pointer;
-        &:hover {
-          color: #008afe;
-        }
-      }
-      .vue-datepicker-header-btn-pre {
-        float: left;
-      }
-      .vue-datepicker-header-btn-next {
-        float: right;
-      }
-    }
-    .vue-datepicker-content {
-      position: relative;
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        thead {
-          line-height: 30px;
-          font-size: 12px;
-          background: #eee;
-        }
-        tbody {
-          tr {
-            line-height: 28px;
-            td {
-              font-size: 12px;
-              text-align: center;
-              cursor: pointer;
-              &.active, &.active:hover {
-                color: #fff;
-                background: #008afe;
-              }
-              &.flag {
-                color: #999;
-              }
-            }
-            td:hover {
-              background: #eee;
-            }
-          }
-        }
-      }
-      .vue-date-picker-year-panel {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #fff;
-        ul {
-          width: 50%;
-          height: 100%;
-          margin: 0;
-          padding-left: 0;
-          box-sizing: border-box;
-          overflow-y: auto;
-          float: left;
-          list-style: none;
-          li {
-            font-size: 14px;
-            text-align: center;
-            line-height: 30px;
-            cursor: pointer;
-            &.active {
-              color: #fff;
-              background: #007acc;
-            }
-          }
-          &:first-child {
-            border-right: 1px solid #007acc;
-          }
-        }
-      }
-    }
-  }
-}
-</style>
 <script>
   export default {
     props: {
@@ -213,9 +119,12 @@
             const year = this.$refs.year
             const month = this.$refs.month
             const y = year.getElementsByClassName('active')[0].innerHTML
-            // const m = month.getElementsByClassName('active')[0].innerHTML
+            // 算出外层div的宽度用来隐藏ul标签的滚动条
+            const width = year.parentNode.offsetWidth
             year.scrollTop = (y - 1900) * 30
             month.scrollTop = (this.select.month - 1) * 30
+            year.style.width = `${width + 18}px`
+            month.style.width = `${width + 18}px`
           })
         }
       }
@@ -234,9 +143,14 @@
         if (!val) {
           return ''
         }
-        return val
-        // return `${val.year}-${val.month}-${ val.date }`.replace(/\d+/g,
-        //   a => a.length === 4 ? a : ((a.length === 2) ? a : (`0${a}`)))
+        const temp = `${val.year}-${val.month}-${val.date}`
+        return temp.replace(/\d+/g, (a) => {
+          if (a.length === 4) {
+            return a
+          }
+          return a.length === 2 ? a : `0${a}`
+          // a => a.length === 4 ? a : ((a.length === 2) ? a : (`0${a}`))
+        })
       }
     },
     methods: {
@@ -359,8 +273,9 @@
       },
       // 更改选中时间并向父组件派发事件
       complete() {
+        const pickedDate = new Date(this.select.year, this.select.month, this.select.date)
           // 触发父组件的传过来的picked事件。三个参数: 年，月，日
-        this.$emit('picked', this.select.year, this.select.month, this.select.date)
+        this.$emit('picked', pickedDate)
         this.current = {
           year: this.select.year,
           month: this.select.month,
@@ -370,3 +285,129 @@
     }
   }
 </script>
+<style lang="scss">
+.vue-datepicker {
+  .vue-datepicker-input {
+    position: relative;
+    height: 2.125rem;
+    input {
+      appearance: none;
+      padding: .3125rem;
+      padding-right: 1.5rem;
+      position: relative;
+      border: 1px #d9d9d9 solid;
+      width: 100%;
+      height: 100%;
+      font-size: 0.875rem;
+      z-index: 0;
+      &:hover {
+        border-color: #787878;
+      }
+      &:focus {
+        outline: none;
+        border-color: #1ba1e2;
+      }
+    }
+    svg {
+      position: absolute;
+      right: 5px;
+      top: 6px;
+    }
+  }
+  .vue-datepicker-wrap {
+    width: 240px;
+    padding-bottom: 1rem;
+    box-shadow: 2px 2px 8px #bdb8b8;
+    z-index: 999;
+    .vue-datepicker-header {
+      padding: 0px 15px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 36px;
+      border-bottom: 1px solid #ccc;
+
+      .vue-datepicker-header-btn {
+        cursor: pointer;
+        &:hover {
+          color: #0288d1;
+        }
+      }
+      .vue-datepicker-header-btn-pre {
+        float: left;
+      }
+      .vue-datepicker-header-btn-next {
+        float: right;
+      }
+    }
+    .vue-datepicker-content {
+      position: relative;
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        thead {
+          line-height: 2rem;
+          font-size: 0.75rem;
+          color: #757575;
+          border-bottom: 1px solid #ccc;
+        }
+        tbody {
+          tr {
+            td {
+              font-size: 0.75rem;
+              padding: 10px 0;
+              text-align: center;
+              cursor: pointer;
+              &.active, &.active:hover {
+                color: #fff;
+                background: #0288d1;
+              }
+              &.flag {
+                color: #bdbdbd !important;
+              }
+            }
+            td:hover {
+              background: #eee;
+            }
+          }
+        }
+      }
+      .vue-date-picker-year-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        &>div {
+          width: 50%;
+          height: 100%;
+          display: inline-block;
+          float: left;
+          overflow: hidden;
+          ul {
+            height: 100%;
+            margin: 0;
+            padding-left: 0;
+            box-sizing: border-box;
+            overflow-y: auto;
+            list-style: none;
+            li {
+              font-size: 14px;
+              text-align: center;
+              line-height: 30px;
+              cursor: pointer;
+              &.active {
+                color: #fff;
+                background: #ccc;
+              }
+            }
+          }
+          &:first-child {
+            border-right: 1px solid #ccc;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

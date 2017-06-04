@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <h3 class="title fg-darkCyan">Helper 帮助类</h3>
-    <p class="no-margin-bottom">Margin相关</p>
+    <h3 class="title fg-darkCyan">Common 通用</h3>
+    <p class="no-margin-bottom">1. Margin相关</p>
     <div class="dashed-box">
       <div class="fg-white bg-cyan no-margin">
         .no-margin
@@ -56,7 +56,7 @@
 &lt;div class="margin20 no-margin-bottom"&gt;&lt;/div&gt;
 </code></pre>
     <br>
-    <p class="no-margin-bottom">Padding相关</p>
+    <p class="no-margin-bottom">2. Padding相关</p>
     <div class="dashed-box">
       <div class="fg-white bg-cyan padding0">
         .padding0
@@ -111,7 +111,7 @@
 &lt;div class="padding20 no-padding-bottom"&gt;&lt;/div&gt;
 </code></pre>
     <br>
-    <p class="no-margin-bottom">Float 相关</p>
+    <p class="no-margin-bottom">3. Float 相关</p>
     <article class="clearfix" style="padding: 10px; border: 1px solid #eee;">
       <section class="pull-left padding15 bg-amber fg-white">
         .pull-left
@@ -129,7 +129,7 @@
 &lt;/article&gt;</code></pre>
     
     <br>
-    <p class="no-margin-bottom">List 列表(清除padding-left和list-style)</p>
+    <p class="no-margin-bottom">4. List 列表(清除padding-left和list-style)</p>
     <ul class="unstyled-list">
       <li>Item1</li>
       <li>Item2</li>
@@ -147,7 +147,7 @@
 </code></pre>
 
     <br>
-    <p class="no-margin-bottom">Shadow 阴影</p>
+    <p class="no-margin-bottom">5. Shadow 阴影</p>
     <div class="demo-box">
       <div class="margin10 padding20 shadow ">
         .shadow

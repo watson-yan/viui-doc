@@ -134,7 +134,8 @@ export default {
           title: '帮助类',
           icon: 'fa fa-question-circle-o',
           nodes: [
-            { name: 'Helper', icon: 'fa fa-gear', link: '/helper' }
+            { name: 'Common 通用', icon: 'fa fa-gear', link: '/helper' },
+            { name: 'Text 文本', icon: 'fa fa-gear', link: '/text' }
           ]
         }
       ]

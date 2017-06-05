@@ -273,9 +273,9 @@
       },
       // 更改选中时间并向父组件派发事件
       complete() {
-        const pickedDate = new Date(this.select.year, this.select.month, this.select.date)
-          // 触发父组件的传过来的picked事件。三个参数: 年，月，日
-        this.$emit('picked', pickedDate)
+        const pickedDate = new Date(this.select.year, this.select.month - 1, this.select.date)
+        // 同步父组件的传过来的moment
+        this.$emit('update:moment', pickedDate.getTime())
         this.current = {
           year: this.select.year,
           month: this.select.month,

@@ -74,6 +74,7 @@ export default {
           icon: 'fa fa-paper-plane',
           nodes: [
             { name: 'Dropdown 下拉按钮', icon: 'fa fa-caret-down', link: '/dropdown-demo' },
+            { name: 'Select 下拉框', icon: 'fa fa-angle-down', link: '/select' },
             { name: 'Pagination 分页器', icon: 'fa fa-ellipsis-h', link: '/pagination-demo' },
             { name: 'Tab 选项卡', icon: 'fa fa-clone', link: '/tabs-demo' },
             { name: 'Upload 上传组件', icon: 'fa fa-upload', link: '/demo2' },

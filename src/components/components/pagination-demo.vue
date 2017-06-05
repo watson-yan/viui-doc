@@ -2,7 +2,13 @@
   <div class="content">
     <h3 class="title fg-darkCyan">Pagination 分页器</h3>
     <pagination :total="120" :cb="go"></pagination>
-    
+    <br>
+    <p class="fg-gray">代码</p>
+<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;div&gt;
+  &lt;!--全局引入后的用法--&gt;
+  &lt;pagination :total="120" :cb="go"&gt;&lt;/pagination&gt;
+&lt;/div&gt;
+</code></pre>
     <p class="fg-gray">Props 列表</p>
     <table class="table striped hovered bordered border">
       <thead>
@@ -43,13 +49,6 @@
         </tr>
       </tbody>
     </table>
-    <br>
-    <p class="fg-gray">代码</p>
-<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;div&gt;
-  &lt;!--全局引入后的用法--&gt;
-  &lt;pagination :total="120" :cb="go"&gt;&lt;/pagination&gt;
-&lt;/div&gt;
-</code></pre>
   </div>
 </template>
 <script>

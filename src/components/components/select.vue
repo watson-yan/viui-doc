@@ -4,7 +4,7 @@
       <input type="text" :value="selectedText" @click.stop="show = !show" readonly>
       <span class="arrow-down" :style="{left: width - 16 + 'px'}"></span>
     </div>
-    <ul v-if="show" class="dropdown-menu">
+    <ul v-if="show" class="dropdown-menu" :style="{width: width + 'px'}">
       <li v-for="item of options" @click="select(item)">
         <a>{{item.text}}</a>
       </li>
@@ -95,7 +95,6 @@ export default {
       width: auto;
       text-align: left;
       background: #ffffff;
-      max-width: 15.625rem;
       max-height: 20rem;
       overflow: auto;
       list-style: none inside none;

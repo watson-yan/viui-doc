@@ -6,7 +6,6 @@
         <div slot="div1" class="padding15 bg-grayLighter">我是div1</div>
         <div slot="div2" class="padding15 bg-grayLighter">我是div2</div>
       </tabs>
-      <br>
       <p class="fg-gray">Props 列表</p>
       <table class="table striped hovered bordered border">
         <thead>

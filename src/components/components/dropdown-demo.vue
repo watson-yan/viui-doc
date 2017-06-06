@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h3 class="title fg-darkCyan">Dropdown 下拉按钮</h3>
-    <div style="height: 80px;">
+    <div style="height: 60px;">
       <section class="pull-left padding15">
         <dropdown :title="'下拉菜单'" :menu="menu" @choice="choice"></dropdown>
       </section>

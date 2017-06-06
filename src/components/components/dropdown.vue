@@ -138,10 +138,13 @@
           text-decoration: none;
           vertical-align: middle;
           position: relative;
-          white-space: nowrap;
           min-width: 12.5rem;
           border: none;
           cursor: pointer;
+          word-break: break-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
           &.disabled {
             color: #999;
             background: #eee;

@@ -316,9 +316,11 @@
   }
   .vue-datepicker-wrap {
     width: 240px;
+    position: absolute;
     padding-bottom: 1rem;
-    box-shadow: 2px 2px 8px #bdb8b8;
+    background: #fff;
     z-index: 999;
+    box-shadow: 2px 2px 8px #bdb8b8;
     .vue-datepicker-header {
       padding: 0px 15px;
       font-size: 14px;

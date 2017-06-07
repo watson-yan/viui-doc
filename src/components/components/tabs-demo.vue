@@ -6,6 +6,30 @@
         <div slot="div1" class="padding15 bg-grayLighter">我是div1</div>
         <div slot="div2" class="padding15 bg-grayLighter">我是div2</div>
       </tabs>
+
+      <p class="fg-gray">HTML代码</p>
+<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;!--:value.sync 为必填(以配合双向绑定)--&gt;
+&lt;tabs :list="list" :value.sync="value"&gt;
+  &lt;!--slot的值为该容器所对应的name--&gt;
+  &lt;div slot="div1" class="padding15 bg-grayLighter"&gt;我是div1&lt;/div&gt;
+  &lt;div slot="div2" class="padding15 bg-grayLighter"&gt;我是div2&lt;/div&gt;
+&lt;/tabs&gt;
+</code></pre>
+
+      <p class="fg-gray">Script代码</p>
+<pre v-prettify class="prettyprint linenums"><code v-pre>export default {
+  data() {
+    return {
+      list: [
+        { name: 'div1' },
+        { name: 'div2' }
+      ],
+      value: 'div1' // 需要激活的容器name
+    }
+  }
+}
+</code></pre>
+
       <p class="fg-gray">Props 列表</p>
       <table class="table striped hovered bordered border">
         <thead>
@@ -32,29 +56,6 @@
           </tr>
         </tbody>
       </table>
-
-      <p class="fg-gray">HTML代码</p>
-<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;!--:value.sync 为必填(以配合双向绑定)--&gt;
-&lt;tabs :list="list" :value.sync="value"&gt;
-  &lt;!--slot的值为该容器所对应的name--&gt;
-  &lt;div slot="div1" class="padding15 bg-grayLighter"&gt;我是div1&lt;/div&gt;
-  &lt;div slot="div2" class="padding15 bg-grayLighter"&gt;我是div2&lt;/div&gt;
-&lt;/tabs&gt;
-</code></pre>
-
-      <p class="fg-gray">Script代码</p>
-<pre v-prettify class="prettyprint linenums"><code v-pre>export default {
-  data() {
-    return {
-      list: [
-        { name: 'div1' },
-        { name: 'div2' }
-      ],
-      value: 'div1' // 需要激活的容器name
-    }
-  }
-}
-</code></pre>
     </div>
   </div>
 </template>

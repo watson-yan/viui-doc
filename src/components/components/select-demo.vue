@@ -36,6 +36,7 @@
     }
   }
 </code></pre>
+  <br>
  <p class="fg-gray">Props 列表</p>
   <table class="table striped hovered bordered border">
     <thead>
@@ -54,11 +55,11 @@
         <td>选项列表{value: x, text: xxx}</td>
       </tr>
       <tr>
-        <td>selected</td>
+        <td>selected.sync</td>
         <td>Object</td>
         <td>False</td>
         <td></td>
-        <td>默认选择项(options中的一项)</td>
+        <td>默认选择项(options中的一项),可不传</td>
       </tr>
       <tr>
         <td>width</td>

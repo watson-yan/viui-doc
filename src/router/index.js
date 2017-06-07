@@ -7,6 +7,8 @@ import Tabs from '@/components/components/tabs-demo'
 import Dropdown from '@/components/components/dropdown-demo'
 import Datepicker from '@/components/components/datepicker-demo'
 import Select from '@/components/components/select-demo'
+import Upload from '@/components/components/upload-demo'
+import Slide from '@/components/components/slide-demo'
 // Plugins
 import Message from '@/components/pluginsDemo/message'
 import Alert from '@/components/pluginsDemo/alert'
@@ -47,6 +49,8 @@ export default new Router({
     { path: '/dropdown-demo', name: 'Dropdown', component: Dropdown },
     { path: '/datepicker-demo', name: 'Datepicker', component: Datepicker },
     { path: '/select-demo', name: 'Select', component: Select },
+    { path: '/upload-demo', name: 'Upload', component: Upload },
+    { path: '/slide-demo', name: 'Slide', component: Slide },
     /*
     * Plugins
     */

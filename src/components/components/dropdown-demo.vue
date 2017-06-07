@@ -39,6 +39,7 @@ methods: {
   }
 }
 </code></pre>
+   <br>
    <p class="fg-gray">Props 列表</p>
    <table class="table striped hovered bordered border">
       <thead>
@@ -85,7 +86,7 @@ methods: {
         <tr>
           <td>choice</td>
           <td>Function</td>
-          <td>n</td>
+          <td>n(选中项的value)</td>
           <td>选中菜单某一项后的回调事件</td>
         </tr>
       </tbody>

@@ -1,12 +1,12 @@
 <template>
   <div class="content">
     <h3 class="title fg-darkCyan">Pagination 分页器</h3>
-    <pagination :total="120" :cb="go"></pagination>
+    <pagination :total="120" :next="go" :show-total="true"></pagination>
     <br>
     <p class="fg-gray">代码</p>
 <pre v-prettify class="prettyprint linenums"><code v-pre>&lt;div&gt;
   &lt;!--全局引入后的用法--&gt;
-  &lt;pagination :total="120" :cb="go"&gt;&lt;/pagination&gt;
+  &lt;pagination :total="120" :next="go" :show-total="true"&gt;&lt;/pagination&gt;
 &lt;/div&gt;
 </code></pre>
     <p class="fg-gray">Props 列表</p>
@@ -41,11 +41,18 @@
           <td>分页大小(每页多少条数据)</td>
         </tr>
         <tr>
-          <td>cb</td>
+          <td>next</td>
           <td>Function</td>
           <td>False</td>
           <td>Function</td>
           <td>选择页面之后的回调</td>
+        </tr>
+        <tr>
+          <td>show-total</td>
+          <td>Boolean</td>
+          <td>False</td>
+          <td>false</td>
+          <td>是否显示总页数</td>
         </tr>
       </tbody>
     </table>

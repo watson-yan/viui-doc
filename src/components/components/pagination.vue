@@ -1,20 +1,24 @@
 <template>
-	<div class="wy-pager">
-		<div>
-			<button class="pager-pre" v-if="currentNum!=1" @click="pre">上一页</button>	
-			<div v-if="showFirst" >
-				<button @click="choose(1)" class="btn-item pager-pre">1</button>
-				<span class="ellipsis">&nbsp;···&nbsp;</span> 
-			</div>
-			<ul class="pager-btn-group">
+	<div class="vi-pagination">
+		<div class="clearfix">
+			<button class="pagination-pre" v-if="currentNum!=1" @click="prePage">Pre</button>	
+			<template v-if="showFirst" >
+				<button @click="choose(1)" class="btn-item pagination-pre">1</button>
+				<button class="ellipsis">&nbsp;...&nbsp;</button> 
+			</template>
+			<ul class="pagination-btn-group">
 				<li v-for="item in pagerList" @click="choose(item)"  track-by="$index"
 					:class="{'btn-item': true, 'active': currentNum == item}">{{item}}</li>
 			</ul>
-			<div v-if="showLast">
-				<span class="ellipsis">&nbsp;···&nbsp;</span>
-				<button @click="choose(totalPagesNum)" class="btn-item pager-next">{{totalPagesNum}}</button>
-			</div>
-			<button class="pager-next" v-if="currentNum != totalPagesNum" @click="next">下一页</button>
+			<template v-if="showLast">
+				<button class="ellipsis">&nbsp;...&nbsp;</button>
+				<button @click="choose(totalPagesNum)" class="btn-item pagination-next">{{totalPagesNum}}</button>
+			</template>
+			<button class="pagination-next" v-if="currentNum != totalPagesNum" @click="nextPage" 
+        style="border-left: none;">Next</button>
+      <section v-if="showTotal" class="pagination-total-show">
+        共{{total}}页
+      </section>
 		</div>
 	</div>
 </template>
@@ -35,7 +39,11 @@ export default {
         return 10
       }
     },
-    cb: {
+    showTotal: {
+      type: Boolean,
+      default: false
+    },
+    next: {
       type: Function,
       default(n) {
         this.$route.query.pn = n
@@ -67,15 +75,15 @@ export default {
   methods: {
     choose(n) { // 选择
       this.currentNum = n
-      if (this.cb && typeof this.cb === 'function') {
-        this.cb(n)
+      if (this.next && typeof this.next === 'function') {
+        this.next(n)
       }
     },
-    pre() { // 上一页
+    prePage() { // 上一页
       this.currentNum = this.currentNum === 1 ? this.currentNum : this.currentNum - 1
       this.choose(this.currentNum)
     },
-    next() { // 下一页
+    nextPage() { // 下一页
       this.currentNum =
         this.currentNum === this.totalPagesNum ? this.totalPagesNum : this.currentNum + 1
       this.choose(this.currentNum)
@@ -111,8 +119,19 @@ export default {
 }
 </script>
 <style lang="scss">
-	.wy-pager {
+	.vi-pagination {
 		text-align: center;
+    button, .btn-item {
+      padding: 5px 10px;
+      color: #666;
+      background: #fff;
+      border: 1px solid #d9d9d9;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        color: #007ACC;
+      }
+    }
 		&>div {
 			display: inline-block;
 			&>button,div {
@@ -124,52 +143,45 @@ export default {
 					margin: 0 3px;
 				}
 			}
-			&::after {
-				content: '';
-				display: block;
-				height: 0;
-				clear: both;
-				visibility: hidden;
-				line-height: 0;
-				font-size: 0;
-			}
       .ellipsis {
-        color: #007ACC;
+        border-left: none;
+        border-right: none;
       }
-      button{
-        margin: 0px 3px;
-        padding: 5px 10px;
-        color: #666;
-        background: #fff;
-        border: 1px solid #e5e5e5;
-        outline: none;
-        cursor: pointer;
-      }
-      .pager-btn-group {
+      .pagination-btn-group {
         display: inline;
         padding-left: 0;
         list-style: none;
         li.btn-item {
           float: left;
-          padding: 5px 10px;
-          margin: 0px 3px;
-          border: 1px solid #007ACC;
-          // box-shadow: 0 2px 3px #666;
-          cursor: pointer;
-          color: #007ACC;
           &.active {
             color: #fff;
             background: #007ACC;
             border: 1px solid #007abb;
-            box-shadow: 0 2px 3px #666;
+          }
+          &:not(:last-child) {
+            border-right: none;
           }
         }
       }
-      .pager-pre,.pager-next {
-        color: #007abb;
-        border: 1px solid #007abb;
-        /* box-shadow: 0 2px 3px #666; */
+      .pagination-pre:first-child {
+        border-right: none;
+      }
+      .pagination-total-show {
+        display: inline-block;
+        padding-left: 1.75rem;
+        line-height: 2.2rem;
+        font-size: 0.875rem;
+        color: #666;
       }
 		}
+    .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      font-size: 0;
+    }
 	}
 </style>

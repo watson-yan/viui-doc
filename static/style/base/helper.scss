@@ -98,9 +98,14 @@
     list-style: none;
 }
 
-.clearfix{
-  overflow:auto;
-  _height:1%;
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
 }
 
 

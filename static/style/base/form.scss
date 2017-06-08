@@ -6,6 +6,19 @@ button, input, select, textarea {
     font-size: 100%;
     vertical-align: middle;
 }
+input, select, textarea {
+  &:hover {
+    border-color: #787878;
+  }
+  &:focus {
+    outline: none;
+    border-color: #1ba1e2;
+  }
+  &:disabled {
+    background-color: #EBEBE4;
+    cursor: not-allowed;
+  }
+}
 label {
   cursor: pointer;
 }
@@ -28,17 +41,6 @@ label {
     height: 100%;
     font-size: 0.875rem;
     z-index: 0;
-    &:hover {
-      border-color: #787878;
-    }
-    &:focus {
-      outline: none;
-      border-color: #1ba1e2;
-    }
-    &:disabled {
-      background-color: #EBEBE4;
-      cursor: not-allowed;
-    }
   }
 
   &.error {
@@ -298,7 +300,7 @@ label {
 
 
 .form-group {
-  margin: .4rem;
+  margin: .4rem 0;
   .label {
     margin-top: 12px;
     padding: 0px 15px;

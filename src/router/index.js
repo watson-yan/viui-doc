@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
+// Demos
+import Demo1 from '@/components/demo/demo1'
+import Demo2 from '@/components/demo/demo2'
 // Components
 import Pagination from '@/components/components/pagination-demo'
 import Tabs from '@/components/components/tabs-demo'
@@ -17,18 +20,15 @@ import Loading from '@/components/pluginsDemo/loading'
 // Element
 import Button from '@/components/element/button'
 import Tag from '@/components/element/tag'
-// Form
-import Input from '@/components/form/input'
-import Radio from '@/components/form/radio'
-import Checkbox from '@/components/form/checkbox'
-import Switch from '@/components/form/switch'
-// Table
-import Table from '@/components/table/table'
-// Color
-import Color from '@/components/color/color'
+import Input from '@/components/element/input'
+import Radio from '@/components/element/radio'
+import Checkbox from '@/components/element/checkbox'
+import Switch from '@/components/element/switch'
+import Table from '@/components/element/table'
 // Grid
 import Grid from '@/components/grid/grid'
 // Helper
+import Color from '@/components/helper/color'
 import Helper from '@/components/helper/helper'
 import Text from '@/components/helper/text'
 
@@ -36,11 +36,12 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
+    { path: '/', name: 'Home', component: Home },
+    /*
+    * Demos
+    */
+    { path: '/demo1', name: 'Demo', component: Demo1 },
+    { path: '/demo2', name: 'Demo2', component: Demo2 },
     /*
     * Components
     */

@@ -71,7 +71,7 @@ export default {
         },
         {
           title: '组件',
-          icon: 'fa fa-paper-plane',
+          icon: 'fa fa-star',
           nodes: [
             { name: 'Dropdown 下拉按钮', icon: 'fa fa-caret-down', link: '/dropdown-demo' },
             { name: 'Select 下拉框', icon: 'fa fa-angle-down', link: '/select-demo' },
@@ -100,41 +100,23 @@ export default {
           ]
         },
         {
-          title: '表单元素',
-          icon: 'fa fa-wpforms',
-          nodes: [
-            { name: 'Input 输入框', icon: 'fa fa-italic', link: '/input' },
-            { name: 'Radio 单选按钮', icon: 'fa fa-circle-o', link: '/radio' },
-            { name: 'CheckBox 复选框', icon: 'fa fa-check-square-o', link: '/checkbox' },
-            { name: 'Switch 开关', icon: 'fa fa-toggle-off', link: '/switch' }
-          ]
-        },
-        {
           title: '元素',
           icon: 'fa fa-cubes',
           nodes: [
             { name: 'Button 按钮', icon: 'fa fa-hand-pointer-o', link: '/button' },
-            { name: 'Tag 标签', icon: 'fa fa-tag', link: '/tag' }
-          ]
-        },
-        {
-          title: '颜色',
-          icon: 'fa fa-paint-brush',
-          nodes: [
-            { name: 'Colors Metro色系', icon: 'fa fa-sticky-note-o', link: '/color' }
-          ]
-        },
-        {
-          title: '表格',
-          icon: 'fa fa-table',
-          nodes: [
+            { name: 'Tag 标签', icon: 'fa fa-tag', link: '/tag' },
+            { name: 'Input 输入框', icon: 'fa fa-italic', link: '/input' },
+            { name: 'Radio 单选按钮', icon: 'fa fa-circle-o', link: '/radio' },
+            { name: 'CheckBox 复选框', icon: 'fa fa-check-square-o', link: '/checkbox' },
+            { name: 'Switch 开关', icon: 'fa fa-toggle-off', link: '/switch' },
             { name: 'Table 表格', icon: 'fa fa-table', link: '/table' }
           ]
         },
         {
           title: '帮助类',
-          icon: 'fa fa-question-circle-o',
+          icon: 'fa fa-wrench',
           nodes: [
+            { name: 'Colors Metro色系', icon: 'fa fa-sticky-note-o', link: '/color' },
             { name: 'Common 通用', icon: 'fa fa-gear', link: '/helper' },
             { name: 'Text 文本', icon: 'fa fa-gear', link: '/text' }
           ]

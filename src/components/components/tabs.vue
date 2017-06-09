@@ -56,9 +56,5 @@
       }
     }
   }
-  &>article {
-    border: 1px solid #ececec;
-    border-top: none;
-  }
 }
 </style>

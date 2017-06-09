@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-      <p class="bg-grayLighter padding5" style="font-size: 0.875rem;">主页 / demo1</p>
+      <p class="bg-grayLighter padding5" style="font-size: 0.875rem;">Home / demo1</p>
       <h4 class="margin5">
         <i class="fa fa-list"></i> Panel</h4>
       <div class="flex-grid">

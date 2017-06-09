@@ -70,7 +70,7 @@ export default {
     .vi-select-input {
       input {
         appearance: none;
-          padding: .3125rem;
+          padding: .425rem;
           padding-right: 1.4rem;
           position: relative;
           border: 1px #d9d9d9 solid;
@@ -83,7 +83,7 @@ export default {
       .arrow-down {
         display: block;
         position: absolute;
-        top: 14px;
+        top: 15px;
         border-top: 4px solid #888;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;

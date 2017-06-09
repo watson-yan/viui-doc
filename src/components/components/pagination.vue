@@ -92,7 +92,7 @@ export default {
       const component = this
       component.pagerList = []
       if (component.totalPagesNum <= 10) {
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= component.totalPagesNum; i++) {
           component.pagerList.push(i)
         }
       } else {

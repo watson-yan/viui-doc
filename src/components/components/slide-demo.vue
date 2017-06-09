@@ -18,10 +18,10 @@
         list: [
           // 传入的数据格式如下:
           // imgUrl为图片地址, url为点击图片时的跳转
-          { imgUrl: './static/imgs/1.jpg', url: '' },
-          { imgUrl: './static/imgs/2.jpg', url: '' },
-          { imgUrl: './static/imgs/3.jpg', url: '' },
-          { imgUrl: './static/imgs/4.jpg', url: '' }
+          { imgUrl: '/static/imgs/1.jpg', url: '' },
+          { imgUrl: '/static/imgs/2.jpg', url: '' },
+          { imgUrl: '/static/imgs/3.jpg', url: '' },
+          { imgUrl: '/static/imgs/4.jpg', url: '' }
         ]
       }
     }
@@ -61,10 +61,22 @@
     data() {
       return {
         list: [
-          { imgUrl: '/static/imgs/1.jpg', url: '' },
-          { imgUrl: '/static/imgs/2.jpg', url: '' },
-          { imgUrl: '/static/imgs/3.jpg', url: '' },
-          { imgUrl: '/static/imgs/4.jpg', url: '' }
+          {
+            imgUrl: 'https://raw.githubusercontent.com/watson-yan/watson-yan.github.io/master/ViUI/static/imgs/1.jpg',
+            url: ''
+          },
+          {
+            imgUrl: 'https://raw.githubusercontent.com/watson-yan/watson-yan.github.io/master/ViUI/static/imgs/2.jpg',
+            url: ''
+          },
+          {
+            imgUrl: 'https://raw.githubusercontent.com/watson-yan/watson-yan.github.io/master/ViUI/static/imgs/3.jpg',
+            url: ''
+          },
+          {
+            imgUrl: 'https://raw.githubusercontent.com/watson-yan/watson-yan.github.io/master/ViUI/static/imgs/4.jpg',
+            url: ''
+          }
         ]
       }
     }

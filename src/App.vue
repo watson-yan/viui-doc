@@ -66,7 +66,8 @@ export default {
           icon: 'fa fa-home',
           nodes: [
             { name: 'Demo1', icon: 'fa fa-laptop', link: '/demo1' },
-            { name: 'Demo2', icon: 'fa fa-laptop', link: '/demo2' }
+            { name: 'Demo2', icon: 'fa fa-laptop', link: '/demo2' },
+            { name: 'Demo3', icon: 'fa fa-laptop', link: '/demo3' }
           ]
         },
         {

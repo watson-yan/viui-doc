@@ -155,10 +155,13 @@
         </p>
       </div>
       <div slot="Purchase Order">
-        2222
+        <br>
+        <div style="height: 450px;">
+          <slide :list="imgList" :duration="5000"></slide>
+        </div>
       </div>
       <div slot="Products">
-        333
+        
       </div>
     </tabs>
   </div>
@@ -179,6 +182,12 @@
           { value: 2, text: 'Category2' },
           { value: 3, text: 'Category3' },
           { value: 4, text: 'Category4' }
+        ],
+        imgList: [
+          { imgUrl: '/static/imgs/1.jpg', url: '' },
+          { imgUrl: '/static/imgs/2.jpg', url: '' },
+          { imgUrl: '/static/imgs/3.jpg', url: '' },
+          { imgUrl: '/static/imgs/4.jpg', url: '' }
         ]
       }
     }

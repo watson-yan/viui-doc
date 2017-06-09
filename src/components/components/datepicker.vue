@@ -290,6 +290,7 @@
   .vue-datepicker-input {
     position: relative;
     height: 2.125rem;
+    margin: .325rem 0;
     input {
       appearance: none;
       padding: .3125rem;

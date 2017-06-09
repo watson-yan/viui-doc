@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 // Demos
 import Demo1 from '@/components/demo/demo1'
 import Demo2 from '@/components/demo/demo2'
+import Demo3 from '@/components/demo/demo3'
 // Components
 import Pagination from '@/components/components/pagination-demo'
 import Tabs from '@/components/components/tabs-demo'
@@ -40,8 +41,9 @@ export default new Router({
     /*
     * Demos
     */
-    { path: '/demo1', name: 'Demo', component: Demo1 },
+    { path: '/demo1', name: 'Demo1', component: Demo1 },
     { path: '/demo2', name: 'Demo2', component: Demo2 },
+    { path: '/demo3', name: 'Demo3', component: Demo3 },
     /*
     * Components
     */

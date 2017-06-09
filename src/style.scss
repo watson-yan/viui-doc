@@ -1,7 +1,7 @@
 @import '../static/style/style.scss';
 
 * {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  // font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -90,6 +90,10 @@ html, body, #app {
               color: #333;
               border-bottom: 1px solid #e5e5e5;
               text-decoration: none;
+              font-size: 0.875rem;
+              i {
+                margin-right: 6px;
+              }
             }
             &.active {
               background: #fff;

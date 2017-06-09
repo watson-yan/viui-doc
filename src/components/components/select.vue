@@ -68,22 +68,25 @@ export default {
     position: relative;
     display: inline-block;
     .vi-select-input {
+      margin: .325rem 0;
+      height: 2.125rem;
+      min-height: 2.125rem;
       input {
         appearance: none;
-          padding: .425rem;
-          padding-right: 1.4rem;
-          position: relative;
-          border: 1px #d9d9d9 solid;
-          width: 100%;
-          height: 100%;
-          font-size: 0.875rem;
-          z-index: 0;
-          cursor: pointer;
+        padding: .375rem;
+        padding-right: 1.4rem;
+        position: relative;
+        border: 1px #d9d9d9 solid;
+        width: 100%;
+        height: 100%;
+        font-size: 0.875rem;
+        z-index: 0;
+        cursor: pointer;
       }
       .arrow-down {
         display: block;
         position: absolute;
-        top: 15px;
+        top: 19px;
         border-top: 4px solid #888;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;

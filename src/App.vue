@@ -15,7 +15,7 @@
         <div>
           <ul class="app-menu unstyled-list clearfix">
             <li class="fg-white">
-                <a href="https://github.com/watson-yan/ViUI" target="_blank">
+                <a href="https://github.com/watson-yan/viui" target="_blank">
                   <i class="fa fa-github" aria-hidden="true"></i> Github [Stared me!]</a>
             </li>
           </ul>
@@ -119,6 +119,13 @@ export default {
             { name: 'Colors Metro色系', icon: 'fa fa-sticky-note-o', link: '/color' },
             { name: 'Common 通用', icon: 'fa fa-gear', link: '/helper' },
             { name: 'Text 文本', icon: 'fa fa-gear', link: '/text' }
+          ]
+        },
+        {
+          title: '关于',
+          icon: 'fa fa-info-circle',
+          nodes: [
+            { name: 'About', icon: '', link: '/about' }
           ]
         }
       ]

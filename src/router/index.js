@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Demo1 from '@/components/demo/demo1'
 import Demo2 from '@/components/demo/demo2'
 import Demo3 from '@/components/demo/demo3'
+import About from '@/components/demo/about'
 // Components
 import Pagination from '@/components/components/pagination-demo'
 import Tabs from '@/components/components/tabs-demo'
@@ -38,6 +39,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     { path: '/', name: 'Home', component: Home },
+    { path: '/about', name: 'About', component: About },
     /*
     * Demos
     */

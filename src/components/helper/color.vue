@@ -65,35 +65,27 @@
     </section>
     <br>
     <h5>背景色用法:</h5>
-    <div class="flex-grid">
-      <div class="row">
-        <div class="cell colspan3 padding30 bg-blue align-center fg-white">
-            background: blue
-        </div>
-        <div class="cell colspan9" style="padding-left: 40px;">
+    <div class="padding30 bg-blue align-center fg-white">
+        background: blue
+    </div>
+    <div>
 <pre v-prettify class="prettyprint linenums"><code v-pre>&lt;div class="bg-blue"&gt;
    background: blue
 &lt;/div&gt;
 </code></pre>
-        </div>
-      </div>
     </div>
     <br>
     <h5 class="no-margin">字体颜色:</h5>
-    <div class="flex-grid">
-      <div class="row">
-        <div class="cell colspan3" style="padding: 30px 0;">
-          <span class="fg-blue">blue</span>
-          <span class="fg-indigo">indigo</span>
-          <span class="fg-darkPink">darkPink</span>
-        </div>
-        <div class="cell colspan9" style="padding-left: 40px;">
-<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;span class="fg-blue"&gt;blue&lt;/span&gt;
-&lt;span class="fg-indigo"&gt;indigo&lt;/span&gt;
-&lt;span class="fg-darkPink"&gt;darkPink&lt;/span&gt;
+    <div>
+      <p class="fg-blue">blue</p>
+      <p class="fg-orange">orange</p>
+      <p class="fg-emerald">emerald</p>
+    </div>
+    <div>
+<pre v-prettify class="prettyprint linenums"><code v-pre>&lt;p class="fg-blue"&gt;blue&lt;/p&gt;
+&lt;p class="fg-orange"&gt;orange&lt;/p&gt;
+&lt;p class="fg-emerald"&gt;emerald&lt;/p&gt;
 </code></pre>
-        </div>
-      </div>
     </div>
   </div>
 </template>

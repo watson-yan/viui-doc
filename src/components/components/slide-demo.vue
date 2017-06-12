@@ -16,7 +16,7 @@
     data() {
       return {
         list: [
-          // 传入的数据格式如下:
+          // 传入的数据格式:
           // imgUrl为图片地址, url为点击图片时的跳转
           { imgUrl: '/static/imgs/1.jpg', url: '' },
           { imgUrl: '/static/imgs/2.jpg', url: '' },

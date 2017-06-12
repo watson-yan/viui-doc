@@ -1,5 +1,5 @@
 {
-  "name": "viui",
+  "name": "viui-doc",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "watson <watson-y@outlook.com>",
@@ -10,10 +10,12 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "viui": "0.0.6",
     "vue": "^2.2.6",
     "vue-router": "^2.3.1"
   },

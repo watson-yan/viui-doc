@@ -16,9 +16,8 @@
           <ul class="app-menu unstyled-list clearfix">
             <li class="fg-white">
                 <a href="https://github.com/watson-yan/ViUI" target="_blank">
-                  <i class="fa fa-github" aria-hidden="true"></i> Github</a>
+                  <i class="fa fa-github" aria-hidden="true"></i> Github [Stared me!]</a>
             </li>
-            <li class="fg-white">About</li>
           </ul>
         </div>
       </div>

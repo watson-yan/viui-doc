@@ -2,17 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import 'babel-polyfill'
 import Vue from 'vue'
+import Viui from 'viui'
 import App from './App'
 import router from './router'
-// 引入组件库
-import components from './components/components/index'
-// 引入插件库
-import plugins from './plugins/index'
 
+// 引入Viui
+Vue.use(Viui)
 
 Vue.config.productionTip = false
-Vue.use(components)
-Vue.use(plugins)
 
 /* eslint-disable no-new */
 new Vue({

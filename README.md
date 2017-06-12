@@ -4,7 +4,7 @@
 ### 提示
 本项目暂时不支持响应式
 
-### 下载源码
+### 下载源码
 > $ git clone https://github.com/watson-yan/viui-doc.git
 
 cd到目录
@@ -15,7 +15,7 @@ cd到目录
 
 > $ cd npm install
 
-在浏览器中打开项目
+在浏览器中打开项目
 
 > $ npm run dev
 
